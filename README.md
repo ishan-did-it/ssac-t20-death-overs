@@ -37,4 +37,4 @@ To reproduce Table 1 (Leakage Gap by Model Capacity) and Table 2 (Model Comparis
     python src/evaluate_ssac.py
     ```
 
-> **Note on Reproducibility:** Cricsheet is a living dataset updated periodically as new matches are played[cite: 26]. Re-running this pipeline on a freshly downloaded dataset may yield slightly different match counts and point estimates than those reported in the abstract; however, the qualitative findings (monotonic leakage scaling with model capacity, null personnel effect) remain stable across data snapshots[cite: 26].
+> **Note on Reproducibility:** Cricsheet is a living dataset updated periodically as new matches are played. Re-running this pipeline on a freshly downloaded dataset may yield slightly different match counts and point estimates than those reported in the abstract; however, the qualitative findings (monotonic leakage scaling with model capacity, null personnel effect) remain stable across data snapshots.
