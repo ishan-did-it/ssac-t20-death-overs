@@ -20,7 +20,7 @@ To reproduce Table 1 (Leakage Gap by Model Capacity) and Table 2 (Model Comparis
     ```
 
 2.  **Download the Raw Data:**
-    Download the T20s JSON dataset from Cricsheet (`https://cricsheet.org/downloads/t20s_json.zip`). Extract the `.json` files into a new directory named `data/raw/` at the root of this repository.
+    Download the **Men's T20s** JSON dataset bundle from Cricsheet (`https://cricsheet.org/downloads/t20s_json.zip`). Extract the `.json` files into a new directory named `data/raw/` at the root of this repository.
 
 3.  **Parse the raw event data:**
     ```bash
@@ -36,5 +36,5 @@ To reproduce Table 1 (Leakage Gap by Model Capacity) and Table 2 (Model Comparis
     ```bash
     python src/evaluate_ssac.py
     ```
-    *Note: The evaluation script automatically outputs the Brier scores, the inflation gap standard errors, and the 95% confidence intervals derived from the 10,000-iteration match-clustered paired bootstrap.*
-    
+
+> **Note on Reproducibility:** Cricsheet is a living dataset updated periodically as new matches are played[cite: 26]. Re-running this pipeline on a freshly downloaded dataset may yield slightly different match counts and point estimates than those reported in the abstract; however, the qualitative findings (monotonic leakage scaling with model capacity, null personnel effect) remain stable across data snapshots[cite: 26].
