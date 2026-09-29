@@ -120,6 +120,11 @@ def run_final_stats():
     mean_diff_d, ci_lower_d, ci_upper_d = paired_boosting_ci_placeholder = paired_bootstrap_ci(y_test, p_c, p_d)
     print(f"(d) XGB Personnel        | Brier: {b_d:.4f} | Δ vs (c): {mean_diff_d:.4f} (95% CI {ci_lower_d:.4f} to {ci_upper_d:.4f})")
 
+# Direct comparison: (b) Naive vs (d) Personnel
+    mean_diff_bd, ci_lower_bd, ci_upper_bd = paired_bootstrap_ci(y_test, p_b, p_d)
+    print(f"Direct (b) vs (d)        | Δ: {mean_diff_bd:.4f} (95% CI {ci_lower_bd:.4f} to {ci_upper_bd:.4f})")
+
+    
     print("\n--- 3. DATASET FACTS FOR ABSTRACT ---")
     print(f"Total Matches [N]:         {len(unique_matches)}")
     print(f"Test Matches [N_test]:     {len(test_matches)}")
