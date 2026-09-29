@@ -19,19 +19,22 @@ To reproduce Table 1 (Leakage Gap by Model Capacity) and Table 2 (Model Comparis
     pip install -r requirements.txt
     ```
 
-2.  **Parse the raw event data:**
-    *(Ensure raw Cricsheet JSON files are placed in `data/raw/` prior to execution)*
+2.  **Download the Raw Data:**
+    Download the T20s JSON dataset from Cricsheet (`https://cricsheet.org/downloads/t20s_json.zip`). Extract the `.json` files into a new directory named `data/raw/` at the root of this repository.
+
+3.  **Parse the raw event data:**
     ```bash
     python src/parse_cricsheet.py
     ```
 
-3.  **Engineer features and baseline dataset:**
+4.  **Engineer features and baseline dataset:**
     ```bash
     python src/engineer_features.py
     ```
 
-4.  **Run the strict evaluation audit:**
+5.  **Run the strict evaluation audit:**
     ```bash
     python src/evaluate_ssac.py
     ```
     *Note: The evaluation script automatically outputs the Brier scores, the inflation gap standard errors, and the 95% confidence intervals derived from the 10,000-iteration match-clustered paired bootstrap.*
+    
